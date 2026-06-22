@@ -3538,7 +3538,7 @@ function calcInlineGram(pfx, gramStr, ratio, gmtPct) {
        </div>` : '';
 
   // ── 6種レシピ定義（30g基準・新方針版） ──
-  // 方針: SH不使用 / タマグリ全廃 / FX1st 10%配合 / ジマ縦架橋 / 余りはアジャスト0
+  // 方針: SH不使用 / タマグリ全廃 / FX1st 5%配合 / ジマ縦架橋 / 余りはアジャスト0
   // AX・BX とも TG3.3%（本物準拠）
   const RECIPES = {
     'AX-basic': {
@@ -3547,11 +3547,11 @@ function calcInlineGram(pfx, gramStr, ratio, gmtPct) {
       border: '#c9a96e',
       headBg: 'linear-gradient(135deg,#8a6428,#c9a96e)',
       items: [
-        { order:1, name: 'クオライン アジャスト0',  g30: 11.3, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
+        { order:1, name: 'クオライン アジャスト0',  g30: 13.0, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
         { order:2, name: 'ウトエト H',             g30:  9.9, color: '#8a6428', tc: '#fff',    note: 'メイン還元剤' },
         { order:3, name: 'タマ アルカリ',          g30:  5.3, color: '#eeffee', tc: '#306030', note: 'アルカリ確立→よく攪拌' },
-        { order:4, name: 'メルコ FX 1st',          g30:  3.0, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（10%）' },
-        { order:5, name: 'ジマレイン酸',           g30:  0.5, color: '#ffeeee', tc: '#c03030', note: '縦架橋・撹拌しながら投入' },
+        { order:4, name: 'メルコ FX 1st',          g30:  1.5, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（5%）' },
+        { order:5, name: 'ジマレイン酸',           g30:  0.3, color: '#ffeeee', tc: '#c03030', note: '縦架橋（1%）・撹拌しながら投入' },
       ]
     },
     'AX-damage': {
@@ -3560,11 +3560,11 @@ function calcInlineGram(pfx, gramStr, ratio, gmtPct) {
       border: '#c9a96e',
       headBg: 'linear-gradient(135deg,#6a4010,#c9a96e)',
       items: [
-        { order:1, name: 'クオライン アジャスト0',  g30: 11.05, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
+        { order:1, name: 'クオライン アジャスト0',  g30: 12.85, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
         { order:2, name: 'ウトエト H',             g30:  9.9, color: '#8a6428', tc: '#fff',    note: 'メイン還元剤' },
         { order:3, name: 'タマ アルカリ',          g30:  5.3, color: '#eeffee', tc: '#306030', note: 'アルカリ確立→よく攪拌' },
-        { order:4, name: 'メルコ FX 1st',          g30:  3.0, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（10%）' },
-        { order:5, name: 'ジマレイン酸',           g30:  0.75, color: '#ffeeee', tc: '#c03030', note: '縦架橋・撹拌しながら投入' },
+        { order:4, name: 'メルコ FX 1st',          g30:  1.5, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（5%）' },
+        { order:5, name: 'ジマレイン酸',           g30:  0.45, color: '#ffeeee', tc: '#c03030', note: '縦架橋増量（1.5%）・撹拌しながら投入' },
       ]
     },
     'BX-basic': {
@@ -3573,10 +3573,10 @@ function calcInlineGram(pfx, gramStr, ratio, gmtPct) {
       border: '#7090c0',
       headBg: 'linear-gradient(135deg,#3a5a90,#7090c0)',
       items: [
-        { order:1, name: 'クオライン アジャスト0', g30:  6.7, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
+        { order:1, name: 'クオライン アジャスト0', g30:  8.4, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
         { order:2, name: 'ウトエト LA',           g30: 19.8, color: '#8a6428', tc: '#fff',    note: 'アルギニン還元剤' },
-        { order:3, name: 'メルコ FX 1st',         g30:  3.0, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（10%）' },
-        { order:4, name: 'ジマレイン酸',          g30:  0.5, color: '#ffeeee', tc: '#c03030', note: '縦架橋・撹拌しながら投入' },
+        { order:3, name: 'メルコ FX 1st',         g30:  1.5, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（5%）' },
+        { order:4, name: 'ジマレイン酸',          g30:  0.3, color: '#ffeeee', tc: '#c03030', note: '縦架橋（1%）・撹拌しながら投入' },
       ]
     },
     'BX-damage': {
@@ -3585,10 +3585,10 @@ function calcInlineGram(pfx, gramStr, ratio, gmtPct) {
       border: '#7090c0',
       headBg: 'linear-gradient(135deg,#2a3a6a,#7090c0)',
       items: [
-        { order:1, name: 'クオライン アジャスト0', g30:  6.2, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
+        { order:1, name: 'クオライン アジャスト0', g30:  8.1, color: '#ddeeff', tc: '#2a4a7f', note: 'バッファー基剤を先入れ' },
         { order:2, name: 'ウトエト LA',           g30: 19.8, color: '#8a6428', tc: '#fff',    note: 'アルギニン還元剤' },
-        { order:3, name: 'メルコ FX 1st',         g30:  3.0, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（10%）' },
-        { order:4, name: 'ジマレイン酸',          g30:  1.0, color: '#ffeeee', tc: '#c03030', note: '縦架橋・撹拌しながら投入' },
+        { order:3, name: 'メルコ FX 1st',         g30:  1.5, color: '#fff0e0', tc: '#8a5a20', note: '補修＋横架橋（5%）' },
+        { order:4, name: 'ジマレイン酸',          g30:  0.6, color: '#ffeeee', tc: '#c03030', note: '縦架橋増量（2%）・撹拌しながら投入' },
       ]
     },
   };
